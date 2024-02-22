@@ -1,0 +1,263 @@
+@font-face {
+  font-family: minecraft;
+  src: url(assets/font/Minecraft.ttf);
+}
+
+img.pause {
+  width: 60px;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  cursor: pointer;
+  -webkit-transition: 0.05s;
+  transition: 0.05s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+img.pause.click {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "minecraft";
+  overflow-x: hidden;
+}
+
+body .go,
+body .winner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -333;
+  opacity: 0;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+body .go button,
+body .winner button {
+  color: rgba(0, 0, 0, 0);
+  border: none;
+  background: url("assets/play.png");
+  background-size: cover;
+  width: 100px;
+}
+
+body .go.show,
+body .winner.show {
+  opacity: 1;
+  z-index: 777;
+}
+
+body div.gv {
+  margin: auto;
+  color: #fff;
+  text-align: center;
+  width: 200px;
+}
+
+body .winner div.gv {
+  width: 400px;
+}
+
+body .go img,
+body .winner img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.non {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+button {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+p.alert {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0;
+  width: 600px;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #fff;
+  position: absolute;
+  bottom: 45%;
+  right: 30%;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+p.alert.show {
+  opacity: 1;
+}
+
+.container-fluid .exam {
+  overflow: hidden;
+  text-align: center;
+  height: 100px;
+  width: 400px;
+  margin: 0 auto;
+  padding-top: 16px;
+  border-bottom: 2px solid #999;
+}
+
+.container-fluid .exam img {
+  width: 10%;
+  margin-bottom: 8px;
+}
+
+.container-fluid .row.justify-content-center {
+  height: 80vh;
+}
+
+.container-fluid .row.justify-content-center .select-karakter {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container-fluid .row.justify-content-center .select-karakter p.prev,
+.container-fluid .row.justify-content-center .select-karakter p.next {
+  -webkit-transition: 0.05s;
+  transition: 0.05s;
+  font-size: 2rem;
+  margin: 0rem 2rem;
+}
+
+.container-fluid .row.justify-content-center .select-karakter p.prev.click {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.container-fluid .row.justify-content-center .select-karakter p.next.click {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.container-fluid .row.justify-content-center .select-karakter .img-karakter-select {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1.5rem;
+}
+
+.container-fluid .row.justify-content-center .select-karakter input.name {
+  width: 350px;
+  text-align: center;
+}
+
+.container-fluid .row.justify-content-center .select-karakter button.play {
+  padding: 0.5rem 4rem;
+  color: rgba(0, 0, 0, 0);
+  background: url("assets/play.png");
+  background-size: cover;
+  border: none;
+}
+
+.container-fluid .row.justify-content-center .main .indicator {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-fluid .row.justify-content-center .main h3.clock span {
+  display: inline-block;
+  width: 50px;
+}
+
+.container-fluid .row.justify-content-center .main .player-img {
+  width: 150px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.container-fluid .row.justify-content-center .main .player-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.container-fluid .row.justify-content-center .main .player-img img.pie,
+.container-fluid .row.justify-content-center .main .player-img img.zzz,
+.container-fluid .row.justify-content-center .main .player-img img.learn {
+  width: 30%;
+  height: 20%;
+  position: absolute;
+  bottom: 20%;
+  left: 40%;
+  opacity: 0;
+  -webkit-transition: 0.05s;
+  transition: 0.05s;
+}
+
+.container-fluid .row.justify-content-center .main .player-img img.learn {
+  width: 50%;
+  height: 40%;
+  bottom: 20%;
+  left: 20%;
+}
+
+.container-fluid .row.justify-content-center .main .player-img img.pie.show,
+.container-fluid .row.justify-content-center .main .player-img img.zzz.show,
+.container-fluid .row.justify-content-center .main .player-img img.learn.show {
+  opacity: 1;
+}
+
+.container-fluid .row.justify-content-center .main .d-flex {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-fluid .row.justify-content-center .main .d-flex button {
+  width: 100px;
+  height: 30px;
+  margin: 0.5rem;
+  background: url("assets/btn-ready.png");
+  background-size: cover;
+  background-position: center;
+  border: none;
+  color: #fff;
+}
+
+.container-fluid .row.justify-content-center .main .d-flex button.click {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media (max-width: 576px) {
+  p.alert {
+    width: 70vw;
+    left: 10px;
+    bottom: 30%;
+  }
+  img.pause {
+    right: 10px;
+  }
+  .container-fluid .exam {
+    width: 100%;
+  }
+}
